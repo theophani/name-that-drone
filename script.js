@@ -48,6 +48,8 @@ window.addEventListener("load", function () {
       }
 
       document.body.removeChild(instructions);
+
+      drone.start();
     }
 
     document.body.appendChild(instructions);
