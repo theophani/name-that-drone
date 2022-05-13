@@ -4,10 +4,15 @@
 
   const songNotes = ["D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D ","C","Ab","G"];
 
+  let noteHolder = document.createElement("section");
+  noteHolder.className = "note";
+  document.body.appendChild(noteHolder);
+
   function playOne (note, delay, i) {
     function play () {
       console.log("playing", note);
-      tones.play(note)
+      tones.play(note);
+      noteHolder.innerHTML = note;
     }
 
     setTimeout(play, delay * i);
@@ -33,6 +38,7 @@
 
   function stopPlayback () {
     clearAllTimeouts();
+    noteHolder.innerHTML = "";
     console.log("stopped playback")
   }
 
