@@ -38,7 +38,13 @@ function noteFromNumber (i) {
 window.addEventListener("load", function () {
     let instructions = document.createElement("section");
     instructions.className = "instructions";
-    instructions.innerHTML = "<p>Click, press spacebar,<br>or tap to begin</p>";
+
+    if ('ontouchstart' in window) {
+      instructions.innerHTML = "<p>Tap to begin</p>";
+      document.querySelector(".footnote").innerHTML = "Tap to stop playback. Tap again to start something new.";
+    } else {
+      instructions.innerHTML = "<p>Click or press spacebar <br> to begin</p>";
+    }
 
     function startDrone () {
       tones.init();
