@@ -2,7 +2,7 @@
 
   const bpm = 60;
 
-  const songNotes = ["D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D ","C","Ab","G"];
+  const songNotes = ["D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G"];
 
   let noteHolder = document.createElement("section");
   noteHolder.className = "note";
