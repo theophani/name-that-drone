@@ -42,20 +42,19 @@
     console.log("stopped playback")
   }
 
-  document.addEventListener("keydown", function (e) {
-    //if (e.code === "Space") {
-    //  autoPlayAll(60 * 1000 / bpm);
-    //}
-
-    if (e.code === "Escape") {
-      stopPlayback();
-    }
-  });
-
   const drone = {
     start: function () {
-
       autoPlayAll(60 * 1000 / bpm);
+
+      document.addEventListener("keydown", function (e) {
+        if (e.code === "Space") {
+          autoPlayAll(60 * 1000 / bpm);
+        }
+
+        if (e.code === "Escape") {
+          stopPlayback();
+        }
+      });
 
       console.log("drone started");
     }
