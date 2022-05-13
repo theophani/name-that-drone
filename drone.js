@@ -98,14 +98,18 @@
     console.log("stopped playback")
   }
 
+  function startPlayback () {
+    stopPlayback();
+    autoPlayAll(60 * 1000 / bpm);
+  }
+
   const drone = {
     start: function () {
-      autoPlayAll(60 * 1000 / bpm);
+      startPlayback();
 
       document.addEventListener("keydown", function (e) {
         if (e.code === "Space") {
-          stopPlayback();
-          autoPlayAll(60 * 1000 / bpm);
+          startPlayback();
         }
 
         if (e.code === "Escape") {
