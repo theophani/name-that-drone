@@ -31,10 +31,14 @@
   }
 
 
-  function playOne (note, delay, i) {
+  function playOne (no, delay, i) {
     function play () {
-      console.log("playing", note);
-      tones.play(note);
+      console.log("playing", no);
+
+      const note = (Array.isArray(no) ? no[0] : no);
+      const octave = (Array.isArray(no) ? no[1] : 4);
+
+      tones.play(note, octave);
       noteHolder.innerHTML = note;
       changeBackground();
     }
