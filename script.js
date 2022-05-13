@@ -38,7 +38,7 @@ function noteFromNumber (i) {
 window.addEventListener("load", function () {
     let instructions = document.createElement("section");
     instructions.className = "instructions";
-    instructions.innerHTML = "<p>Click or tap to begin</p>";
+    instructions.innerHTML = "<p>Click, press spacebar,<br>or tap to begin</p>";
 
     function startDrone () {
       tones.init();
