@@ -1,6 +1,6 @@
 (function(window) {
 
-  const bpm = 60;
+  const bpm = 28;
 
   const songNotes = ["D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G"];
 
