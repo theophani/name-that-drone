@@ -44,7 +44,7 @@ window.addEventListener("load", function () {
       tones.init();
 
       if ('ontouchstart' in window) {
-        tones.play("c");
+        tones.play(10);
       }
 
       document.body.removeChild(instructions);
