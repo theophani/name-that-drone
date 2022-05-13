@@ -35,7 +35,7 @@ div:hover, div.auto-playing {
 }
 
 .instructions p {
-  color: #000;
+  color: #333;
   font-family: -apple-system, system-ui, sans-serif;
   font-size: 5em;
   font-weight: bold;
@@ -69,7 +69,7 @@ div:hover, div.auto-playing {
   position: absolute;
   top: 0;
   width: 100vw;
-  color: #000;
+  color: white;
   font-family: -apple-system, system-ui, sans-serif;
   font-size: 10em;
   font-weight: bold;
