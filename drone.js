@@ -2,6 +2,8 @@
 
   const bpm = 28;
 
+  let playing = false;
+
   function randomSong () {
 
     const catalogue = [
@@ -64,6 +66,7 @@
       const note = (Array.isArray(no) ? no[0] : no);
       const octave = (Array.isArray(no) ? no[1] : 4);
 
+      playing = true;
       tones.play(note, octave);
       noteHolder.innerHTML = note;
       changeBackground();
@@ -93,6 +96,7 @@
   }
 
   function stopPlayback () {
+    playing = false;
     clearAllTimeouts();
     noteHolder.innerHTML = "";
     console.log("stopped playback")
@@ -114,6 +118,14 @@
 
         if (e.code === "Escape") {
           stopPlayback();
+        }
+      });
+
+      document.addEventListener("touchstart", function (e) {
+        if (playing) {
+          stopPlayback();
+        } else {
+          startPlayback();
         }
       });
 
