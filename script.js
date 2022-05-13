@@ -40,7 +40,7 @@ window.addEventListener("load", function () {
     instructions.className = "instructions";
     instructions.innerHTML = "<p>Click or tap to begin</p>";
 
-    instructions.onclick = function () {
+    function startDrone () {
       tones.init();
 
       if ('ontouchstart' in window) {
@@ -51,6 +51,14 @@ window.addEventListener("load", function () {
 
       drone.start();
     }
+
+    document.addEventListener("keydown", function (e) {
+      if (e.code === "Space") {
+        startDrone();
+      }
+    }, { once: true });
+
+    instructions.onclick = startDrone;
 
     document.body.appendChild(instructions);
 }, false);
