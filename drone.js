@@ -104,6 +104,7 @@
 
       document.addEventListener("keydown", function (e) {
         if (e.code === "Space") {
+          stopPlayback();
           autoPlayAll(60 * 1000 / bpm);
         }
 
