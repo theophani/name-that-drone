@@ -50,7 +50,7 @@
     }
 
     playAll();
-    setInterval(playAll, delay * songNotes.length);
+    setInterval(playAll, delay * songNotes.length + delay * 4);
   }
 
   function clearAllTimeouts () {
