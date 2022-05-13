@@ -8,11 +8,35 @@
   noteHolder.className = "note";
   document.body.appendChild(noteHolder);
 
+  function changeBackground () {
+    const backgrounds = [
+      "sky",
+      "sea",
+      "bubble-gum",
+      "fireball",
+      "sunset",
+      "cool-mint",
+      "fuji",
+      "rainbow",
+      "sideways-rainbow"
+    ];
+
+    let i = Math.floor(Math.random() * backgrounds.length);
+
+    while (document.body.className === backgrounds[i]) {
+      i = Math.floor(Math.random() * backgrounds.length);
+    }
+
+    document.body.className = backgrounds[i];
+  }
+
+
   function playOne (note, delay, i) {
     function play () {
       console.log("playing", note);
       tones.play(note);
       noteHolder.innerHTML = note;
+      changeBackground();
     }
 
     setTimeout(play, delay * i);
