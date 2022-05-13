@@ -2,7 +2,26 @@
 
   const bpm = 28;
 
-  const songNotes = ["D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G"];
+  function randomSong () {
+
+    const catalogue = [
+      // https://noobnotes.net/nevergonnagiverickastley/
+      ["A","B",["D",5],"B",["F#",5],["F#",5],["E",5],
+      "A","B",["D",5],"B",["E",5],["E",5],["D",5],["C#",5],"B",
+      "A","B",["D",5],"B",["D",5],["E",5],["C#",5],"A","A",["E",5],["D",5]],
+
+      // https://noobnotes.net/myheartwillgooncelinedion/
+      ["G", "A", "D", ["D",5], ["C",5], "B", "A",
+      "B", ["C",5], "B", "A", "G", "F#", "G", "G", "D",
+      "G", "A", "D", ["D",5], ["C",5], "B", "A",
+      "B", ["C",5], "B", "A", "G", "F#", "G",
+      "G", "F#", "G", "A", "B", "A", "G"],
+
+      ["D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G"]
+    ];
+
+    return catalogue[Math.floor(Math.random() * catalogue.length)];
+  }
 
   let noteHolder = document.createElement("section");
   noteHolder.className = "note";
@@ -47,6 +66,8 @@
   }
 
   function autoPlayAll (delay) {
+    const songNotes = randomSong();
+
     function playAll () {
       for (let i = 0; i < songNotes.length; i++) {
         playOne(songNotes[i], delay, i);
