@@ -4,6 +4,7 @@ html, body {
   margin: 0;
   text-align: center;
   position: relative;
+  font-family: -apple-system, system-ui, sans-serif;
 }
 
 div {
@@ -36,7 +37,6 @@ div:hover, div.auto-playing {
 
 .instructions p {
   color: #333;
-  font-family: -apple-system, system-ui, sans-serif;
   font-size: 5em;
   font-weight: bold;
   text-transform: uppercase;
@@ -51,6 +51,13 @@ div:hover, div.auto-playing {
 /* Instructions for mobile visitors */
 .instructions .mobile {
   display: none;
+}
+
+.footnote {
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  color: white;
 }
 
 @media(max-width: 1000px) {
@@ -70,7 +77,6 @@ div:hover, div.auto-playing {
   top: 0;
   width: 100vw;
   color: white;
-  font-family: -apple-system, system-ui, sans-serif;
   font-size: 10em;
   font-weight: bold;
 }
