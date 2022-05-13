@@ -72,7 +72,6 @@ div:hover, div.auto-playing {
   display: flex;
   height: 100vh;
   justify-content: center;
-  padding: 2em;
   position: absolute;
   top: 0;
   width: 100vw;
