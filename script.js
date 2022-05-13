@@ -36,4 +36,19 @@ function noteFromNumber (i) {
 }
 
 window.addEventListener("load", function () {
+    let instructions = document.createElement("section");
+    instructions.className = "instructions";
+    instructions.innerHTML = "<p>Click or tap to begin</p>";
+
+    instructions.onclick = function () {
+      tones.init();
+
+      if ('ontouchstart' in window) {
+        tones.play("c");
+      }
+
+      document.body.removeChild(instructions);
+    }
+
+    document.body.appendChild(instructions);
 }, false);
