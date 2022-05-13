@@ -17,7 +17,14 @@
       "B", ["C",5], "B", "A", "G", "F#", "G",
       "G", "F#", "G", "A", "B", "A", "G"],
 
-      ["D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G"]
+      // https://noobnotes.net/bridge-over-troubled-water-simon-and-garfunkel/
+      [["G",5], ["F",5], ["D#",5], ["D",5], ["C",5], ["C",5], "Bb", "G", "Bb",
+      ["C",5], ["D#",5], ["F",5], ["G",5], ["D#",5],
+      ["G",5], ["F",5], ["G",5], ["F",5], ["D#",5],
+      ["D",5], "C", ["C",5], "Bb", "G", "Bb",
+      ["C",5], ["D#",5], ["F",5], ["G",5], ["D#",5]]
+
+      //["D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G","D","C","Ab","G"]
     ];
 
     return catalogue[Math.floor(Math.random() * catalogue.length)];
