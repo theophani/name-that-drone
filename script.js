@@ -10,11 +10,11 @@ tones.type = "sine";
 
 // The “attack” determines how intensely the sound starts.
 // Try other numbers to see how it smooths out the tone.
-tones.attack = 1;
+tones.attack = 3;
 
 // The “release” determines how quickly the sound fades out.
 // Try other numbers to see how it creates clipped or echoey sounds.
-tones.release = 100;
+tones.release = 1000;
 
 // Takes an integer and returns a note in Hz.
 // Integers 0 though 7 are the notes on the C Major scale.
